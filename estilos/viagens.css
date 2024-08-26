@@ -1,0 +1,78 @@
+
+.tour {
+    background: linear-gradient(45deg, rgba(201, 212, 214, 0.9), rgba(174, 228, 223, 0.7));
+    margin: 20px; /* Adiciona uma margem de 20 pixels ao redor de todo o conteúdo da página */
+    padding: 0; /* Remove o padding padrão do body, se houver */
+}
+.destination {
+    display: flex;    
+    flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte se necessário */
+    justify-content: space-between; /* Distribui os itens com espaçamento entre eles */
+    background-color: #ddd7d7;
+    margin: 20px 0; /* Ajusta a margem para adicionar espaço no topo e na parte inferior */
+    padding: 20px;
+    border: 1px solid #ddd;
+    gap: 20px; /* Adiciona um espaço horizontal mínimo entre os cards */
+}
+.destinos {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    display: block; /* Remove qualquer espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Organiza a imagem e o texto verticalmente */
+    flex: 1 1 23%; /* Permite que os cards se ajustem para ocupar 23% da largura disponível */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    background-color: white; /* Cor de fundo dos cards */
+    border-radius: 10px; /* Arredonda os cantos dos cards */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do card */
+    padding: 10px;
+    margin: 10px 0; /* Margem vertical para espaçamento entre os cards */
+}
+
+.card-img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do card */
+    height: 200px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem cubra a área do card, mantendo a proporção */
+    border-radius: 10px 10px 0 0; /* Arredonda apenas os cantos superiores da imagem */
+}
+
+.titulo_card {
+    display: inline-block; /* Permite que a etiqueta se comporte como um bloco */
+    background-color: #FF5733; /* Cor de fundo da etiqueta */
+    color: white; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 5px 10px; /* Adiciona padding ao redor do texto */
+    border-radius: 5px; /* Arredonda os cantos da etiqueta */
+    text-transform: uppercase; /* Converte o texto para letras maiúsculas */
+    margin-bottom: 10px; /* Espaço abaixo da etiqueta */
+    text-align: center;
+}
+
+.confira {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+/* Para telas menores, como celulares */
+@media (max-width: 768px) {
+    .destination {
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    .card {
+        width: 90%; /* Ajusta a largura dos cards para ocupar 90% da tela */
+    }
+}

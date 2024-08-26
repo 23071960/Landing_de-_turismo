@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tour">
+    <header class="cabeçalho">
+        <div class="principal">
+            <img src="imagens/imagem2.jpg" alt="Avião" class="aviao">
+            <img src="imagens/explore.svg" alt="Explore" class="explore">
+        </div>
+    </header>
+
+    <div class="destinos">
+        <img src="imagens/Group 49.svg" alt="Destinos" class="destinos">
+    </div>
+    <hr class="linha-personalizada"> <!-- Linha horizontal personalizada -->
+
+    <div class="destination">
+        <div class="card">
+            <img src="imagens/tajmahal.svg" alt="Taj Mahal" class="card-img">
+            <span class="titulo_card">Índia</span>
+        <ul>
+           <li> Hospedagem em hotel de luxo com vista para o Taj Mahal.</li><br>
+            <li>Tour guiado pelo monumento ao amanhecer.</li><br>
+            <li>Visitação aos jardins do palácio com café da manhã ao ar livre.</li><br>
+            <li>Pausa para fotografias nas dependências do palácio e aquisição de souveniers personalizados</li><br>
+        </ul>
+            <a href="viagens.html" class="confira">Saiba mais...</a>
+        </div>
+
+        <div class="card">
+            <img src="imagens/veneza.svg" alt="Veneza" class="card-img">
+            <span class="titulo_card">Itália</span>
+        <ul>
+            <li>Acomodação em um palácio histórico à beira do Grande Canal.</li><br>
+            <li>Café da manhã no saguão do palácio com musica ambiente de orquestra de cordas</li><br>
+            <li>Passeio de gôndola privativa pelos canais da cidade.</li><br>
+            <li>Almoço ao ar livre em chácara com bifet em chalés individuais</li>
+            <li>Tour guiado, à noite, pelos restaurantes e tavernas com gatyronomias musicas tipicas</li>
+        </ul>
+            <a href="viagens.html" class="confira">Saiba mais...</a>
+        </div>
+
+        <div class="card">
+            <img src="imagens/dubai.svg" alt="Dubai" class="card-img">
+            <span class="titulo_card">Árabia</span>
+        <ul>
+            <li>Estadia em um hotel 5 estrelas com vista para o horizonte de Dubai</li><br>
+            <li>Visita ao mercado de especiarias e leilão de obras de arte</li><br>
+            <li>Visita a exposição de carros modernos no salão dos automóveis</li><br>
+            <li>Entrevista e momento de autógrafo com o principe ou a princesa</li>
+        </ul>
+            <a href="viagens.html" class="confira">Saiba mais...</a>
+        </div>
+
+        <div class="card">
+            <img src="imagens/egito.svg" alt="Egito" class="card-img">
+            <span class="titulo_card">Egito</span>
+        <ul>
+           <li>Hospedagem em um resort à beira-mar, no Mar Vermelho.</li><br>
+            <li>Excursão às pirâmides e a esfinge de Gizé e ao Museu Egípcio no Cairo.</li><br>
+            <li>Visita a um oásis com uma caravana montada em camelos</li><br>
+            <li>Visita à tumba de Ramissés III </li><br>
+            <li> Passeio submarino com mergulho ao palácio Antirhodos, o enorme palácio da faraó Cleópatra.</li> 
+        </ul>
+            <a href="viagens.html" class="confira">Saiba mais...</a>
+        </div>
+    </div>
+
+    <div class="formulario-container">
+        <h2>Cadastre-se para receber mais informações.</h2>
+        <form action="submit_form.html" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="destino">Escolha um Destino:</label>
+            <select id="destino" name="destino" required>
+                <option value="india">Índia</option>
+                <option value="italia">Itália</option>
+                <option value="arabia">Árabia</option>
+                <option value="egito">Egito</option>
+            </select>
+
+            <button type="button" class="botao-enviar" onclick="window.location.href='grato.html';">Enviar</button>
+
+        </form>
+    </div>
+
+    <footer>
+        2º A - Técnico em Desenvolvimento de Sistemas<br>
+        Colégio Estadual Ayrton Senna da Silva - Toledo - PR
+    </footer>
+</body>
+</html>
+

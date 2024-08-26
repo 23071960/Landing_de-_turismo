@@ -1,0 +1,270 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.carrossel-container {
+    position: relative;
+    max-width: 97%;
+    margin: 2% auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+    background-color: #c2833b;
+}
+.carrossel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrossel-imagens {
+    display: flex;
+    width: calc(200%); /* Duplica o tamanho do container para criar o loop contínuo */
+    animation: deslizar 20s linear infinite; /* Animação para deslizar continuamente */
+}
+
+@keyframes deslizar {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Move 50% para a esquerda, mostrando a segunda metade das imagens */
+    }
+}
+
+.imagem-container {
+    flex-shrink: 0;
+    width: calc(100% / 6); /* Assumindo que você tenha 9 imagens */
+    text-align: center;
+    position: relative;
+    margin:05px; /* Adiciona espaço entre as imagens */
+}
+
+.imagem-carrossel {
+    height: 150px; /* Altura fixa para todas as imagens */
+    width: 500px;   /* Mantém a proporção da imagem */
+    max-width: 100%; /* Impede que a largura ultrapasse o container */
+    object-fit: cover; /* Corta a imagem para preencher o container */   
+    margin: 0 5px; /* Pequeno espaçamento entre as imagens */
+}
+
+.imagem-label {
+    position: relative;
+    display: block;
+    margin: 10px; /* Adiciona espaço entre a label e a imagem */
+    background-color: rgba(59, 44, 31, 0.7);
+    color: white;
+    padding: 5px 10px;  
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto; /* Centraliza a label acima da imagem */
+}
+
+.carrossel-anterior,
+.carrossel-proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carrossel-anterior {
+    left: 15px;
+}
+
+.carrossel-proximo {
+    right: 15px;
+}
+
+.carrossel-anterior:hover,
+.carrossel-proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Estilos para telas pequenas (smartphones) */
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 30px;
+        left: 20px;
+    }
+
+    .explore {
+        top: 35%;
+        right: 10px;
+        width: 50%;
+    }
+
+    .oferta {
+        font-size: 30px;
+        left: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .saiba-mais {
+        font-size: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .imagem-carrossel {
+        width: 300px; /* Reduz a largura das imagens no carrossel */
+        height: auto;
+    }
+
+    .carrossel-container {
+        margin: 5% auto;
+        max-width: 95%;
+    }
+
+    .imagem-label {
+        font-size: 12px;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .titulo {
+        font-size: 40px;
+        left: 40px;
+    }
+
+    .explore {
+        top: 38%;
+        right: 15px;
+        width: 40%;
+    }
+
+    .oferta {
+        font-size: 40px;
+        left: 40px;
+    }
+
+    .saiba-mais {
+        font-size: 25px;
+        left: 40px;
+    }
+
+    .imagem-carrossel {
+        width: 400px; /* Ajusta a largura das imagens no carrossel */
+        height: auto;
+    }
+
+    .carrossel-container {
+        margin: 5% auto;
+        max-width: 95%;
+    }
+
+    .imagem-label {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para telas grandes (desktops) */
+@media (min-width: 1025px) {
+    .titulo {
+        font-size: 50px;
+    }
+
+    .explore {
+        top: 42%;
+        right: 20px;
+    }
+
+    .oferta {
+        font-size: 50px;
+    }
+
+    .saiba-mais {
+        font-size: 30px;
+    }
+
+    .imagem-carrossel {
+        width: 500px;
+        height: auto;
+    }
+
+    .carrossel-container {
+        margin: 2% auto;
+        max-width: 97%;
+    }
+
+    .imagem-label {
+        font-size: 16px;
+    }
+}
+
+.carrossel-imagens {
+    display: flex;
+    width: calc(200%); /* Duplica o tamanho do container para criar o loop contínuo */
+    animation: deslizar 05s linear infinite; /* Animação para deslizar continuamente */
+}
+
+@keyframes deslizar {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Move 50% para a esquerda, mostrando a segunda metade das imagens */
+    }
+}
+
+.imagem-container {
+    flex-shrink: 0;
+    width: calc(100% / 6); /* Assumindo que você tenha 9 imagens */
+    text-align: center;
+    position: relative;
+    margin:05px; /* Adiciona espaço entre as imagens */
+}
+
+.imagem-carrossel {
+    height: 150px; /* Altura fixa para todas as imagens */
+    width: 500px;   /* Mantém a proporção da imagem */
+    max-width: 100%; /* Impede que a largura ultrapasse o container */
+    object-fit: cover; /* Corta a imagem para preencher o container */   
+    margin: 0 5px; /* Pequeno espaçamento entre as imagens */
+}
+
+.imagem-label {
+    position: relative;
+    display: block;
+    margin: 10px; /* Adiciona espaço entre a label e a imagem */
+    background-color: rgba(59, 44, 31, 0.7);
+    color: white;
+    padding: 5px 10px;  
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto; /* Centraliza a label acima da imagem */
+}
+
+.carrossel-anterior,
+.carrossel-proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carrossel-anterior {
+    left: 15px;
+}
+
+.carrossel-proximo {
+    right: 15px;
+}
+.carrossel-anterior:hover,
+.carrossel-proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
